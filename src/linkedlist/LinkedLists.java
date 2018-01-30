@@ -5,8 +5,35 @@ import java.util.LinkedList;
 public class LinkedLists {
 	public static void main(String[] args){
 
+		//Using LinkList class
+		LinkList linkList= new LinkList();
+		linkList.insertFirst(10);
+		linkList.insertFirst(20);
+		linkList.insertFirst(30);
+
+		linkList.displayList();
+
+		Link findKey= linkList.findKey(30);
+		if(findKey!=null)
+			System.out.println("Found key: "+findKey.data);
+		else
+			System.out.println("Link Not Found");
+
+		Link delLink=linkList.deleteLink(20);
+		if(delLink!=null)
+			System.out.println("Key deleted: "+delLink.data);
+		else
+			System.out.println("Link Not Found");
+
+		linkList.displayList();
+		while(!linkList.isEmpty()){
+			System.out.println("Deleted");
+			linkList.deleteFirst();
+		}
+
+		//Using standard LinkedList
 		LinkedList<Integer> linkedList= new LinkedList<>();
-		
+
 		linkedList.add(1);
 		linkedList.add(2);
 		linkedList.add(3);

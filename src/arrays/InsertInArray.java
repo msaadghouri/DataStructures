@@ -2,9 +2,11 @@ package arrays;
 
 public class InsertInArray {
 
+	/*
+	 * Inserting in a sorted array 
+	 * */
 
 	public static void main(String[] args) {
-
 		int[] array = new int[10];
 		array[0]=1;
 		array[1]=2;
@@ -13,7 +15,6 @@ public class InsertInArray {
 		array[4]=6;
 		int ele=5;
 		insert(ele,array, 4);
-
 	}
 
 	private static void insert(int elements, int[] array, int value) {
@@ -27,7 +28,7 @@ public class InsertInArray {
 		}
 		array[elements-1] = value;
 		for (int i =0;i<elements;i++){
-			System.out.print(array[i]);
+			System.out.print(array[i]+" ");
 		}
 	}
 }
